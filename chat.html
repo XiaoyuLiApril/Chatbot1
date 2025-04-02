@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陪伴聊天机器人</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome 图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <!-- 字体大小调节按钮 -->
+    <div class="font-size-controls">
+        <span>字体大小</span>
+        <button onclick="increaseFontSize()">大</button>
+        <button onclick="decreaseFontSize()">小</button>
+    </div>
+    
+
+
+    <!-- 聊天框 -->
+    <div class="chat-container">
+        <div class="chat-box" id="chat-box"></div>
+        <div class="input-area" id="input-area">
+            <!-- 初始状态，显示输入框和发送语音按钮 -->
+            <textarea id="user-input"></textarea>
+            <button onclick="sendMessage()">发送</button>
+            <button onclick="showState2()">语音输入</button> <!-- 点击后切换到状态2 -->
+        </div>
+    </div>
+
+
+
+    
+    <script src="dialogue.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
