@@ -480,7 +480,6 @@ button:hover {
 /* 针对屏幕宽度小于 600px 的设备（如手机）调整样式 */
 @media (max-width: 600px) {
     .chat-container {
-        background-color: transparent; /* 去除背景色 */
         border-radius: 0; /* 去除圆角 */
         box-shadow: none; /* 去除阴影 */
         margin-top: 0;
@@ -497,11 +496,11 @@ button:hover {
     }
 
     .message-avatar {
-        width: 40px; /* 缩小头像 */
-        height: 40px; /* 缩小头像 */
+        width: 60px; /* 缩小头像 */
+        height: 60px; /* 缩小头像 */
     }
 
     .message span {
-        font-size: 16px; /* 调整字体大小以适应小屏幕 */
+        font-size: 20px; /* 调整字体大小以适应小屏幕 */
     }
 }
