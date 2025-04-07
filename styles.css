@@ -91,7 +91,6 @@ body {
     flex-direction: column;
     height: 90%; /* 固定高度 */
     margin-top: 30px;
-    margin-bottom: 20px;
 }
 
 /* 聊天记录框 */
@@ -484,6 +483,7 @@ button:hover {
         box-shadow: none; /* 去除阴影 */
         margin-top: 0;
         margin-bottom: 0;
+        height: 100vh;  /* 高度为视口高度，确保充满整个屏幕 */
     }
 
     .chat-box {
@@ -497,22 +497,27 @@ button:hover {
 
     /* 聊天气泡头像 */
     .message-avatar {
-        width: 50px; /* 剪裁头像大小 */
-        height: 50px; /* 剪裁头像大小 */
+        width: 80px; /* 剪裁头像大小 */
+        height: 80px; /* 剪裁头像大小 */
         margin-right: 10px;
+        margin-left: 10px;
         object-fit: contain; /* 图片完整显示，保持比例 */
 }
 
     /* 用户消息头像 */
     .message.user .message-avatar {
-        width: 50px; /* 用户头像大小 */
-        height: 50px; /* 用户头像大小 */
+        width: 80px; /* 用户头像大小 */
+        height: 80px; /* 用户头像大小 */
         margin-left: 10px; /* 距离右侧文字的间距 */
-        margin-right: 0; /* 确保头像在右侧 */
+        margin-right: 10px; /* 确保头像在右侧 */
         object-fit: cover; /* 确保图片完整显示 */
     }
 
     .message span {
         font-size: 20px; /* 调整字体大小以适应小屏幕 */
+    }
+
+    .font-size-controls {
+        display: none; /* 隐藏按钮 */
     }
 }
