@@ -215,11 +215,28 @@ function enableUserInput() {
     let inputArea = document.getElementById('user-input');
     if (inputArea) {
         inputArea.disabled = false; // 启用输入框
-        inputArea.focus(); // 自动聚焦
+        // 不自动聚焦，避免弹出键盘
     } else {
         console.error('没有找到textarea元素');
     }
+
+    // 滚动聊天框到底部，确保显示最新的消息
+    scrollToBottom();
 }
+
+// 滚动聊天框到底部的函数
+function scrollToBottom() {
+    let chatBox = document.getElementById('chat-box');
+    if (chatBox) {
+        chatBox.scrollTop = chatBox.scrollHeight;  // 滚动到底部
+    }
+}
+
+// 监听输入框获得焦点时的事件，滚动到聊天框底部
+document.getElementById('user-input').addEventListener('focus', function() {
+    scrollToBottom();
+});
+
 
 // 发送用户输入
 function sendMessage() {
