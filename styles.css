@@ -523,11 +523,11 @@ button:hover {
 
     .message.bot span,
     .message.user span {
-        max-width: 80%;  /* 限制气泡最大宽度为屏幕宽度的 80% */
+        max-width: 70%;  /* 限制气泡最大宽度为屏幕宽度的 60% */
     }
 
     .profile-avatar {
-        width: 150px;  /* 在手机端显示较小的大头像 */
-        height: 150px; /* 保持头像的高度与宽度一致 */
+        width: 200px;  /* 在手机端显示较小的大头像 */
+        height: 200px; /* 保持头像的高度与宽度一致 */
     }
 }
