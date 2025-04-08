@@ -497,8 +497,8 @@ button:hover {
 
     /* 聊天气泡头像 */
     .message-avatar {
-        width: 80px; /* 剪裁头像大小 */
-        height: 80px; /* 剪裁头像大小 */
+        width: 60px; /* 剪裁头像大小 */
+        height: 60px; /* 剪裁头像大小 */
         margin-right: 10px;
         margin-left: 10px;
         object-fit: contain; /* 图片完整显示，保持比例 */
@@ -506,8 +506,8 @@ button:hover {
 
     /* 用户消息头像 */
     .message.user .message-avatar {
-        width: 80px; /* 用户头像大小 */
-        height: 80px; /* 用户头像大小 */
+        width: 60px; /* 用户头像大小 */
+        height: 60px; /* 用户头像大小 */
         margin-left: 10px; /* 距离右侧文字的间距 */
         margin-right: 10px; /* 确保头像在右侧 */
         object-fit: cover; /* 确保图片完整显示 */
@@ -519,5 +519,15 @@ button:hover {
 
     .font-size-controls {
         display: none; /* 隐藏按钮 */
+    }
+
+    .message.bot span,
+    .message.user span {
+        max-width: 80%;  /* 限制气泡最大宽度为屏幕宽度的 80% */
+    }
+
+    .profile-avatar {
+        width: 150px;  /* 在手机端显示较小的大头像 */
+        height: 150px; /* 保持头像的高度与宽度一致 */
     }
 }
