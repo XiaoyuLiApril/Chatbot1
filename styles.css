@@ -531,47 +531,4 @@ button:hover {
         height: 250px; /* 保持头像的高度与宽度一致 */
     }
 
-    
-    .input-area.state3 {
-        display: flex;
-        flex-direction: column; /* 竖直排列 */
-        align-items: center; /* 居中显示 */
-        gap: 10px; /* 增加间距 */
-        padding: 20px; /* 给输入区域增加间距 */
-    }
-
-    /* 录音条、时长、录音中在同一行 */
-    .audio-recording {
-        display: flex;
-        justify-content: center;  /* 水平居中排列 */
-        align-items: center; /* 垂直居中 */
-        gap: 10px; /* 让元素之间有间距 */
-        width: 100%; /* 占满宽度 */
-    }
-
-    .audio-animation {
-        display: flex;
-        justify-content: center; /* 水平排列录音条 */
-        gap: 5px;
-    }
-
-    .recording-status {
-        font-size: 16px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    /* 按钮容器水平排列 */
-    .button-container {
-        display: flex;
-        justify-content: center; /* 按钮居中 */
-        gap: 10px; /* 按钮之间的间距 */
-        width: 100%; /* 让按钮占满宽度 */
-    }
-
-    /* 按钮样式 */
-    .stop-recording-btn, .keyboard-btn {
-        flex: 1; /* 让按钮占满剩余空间 */
-    }
 }
