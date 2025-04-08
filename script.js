@@ -237,6 +237,21 @@ document.getElementById('user-input').addEventListener('focus', function() {
     scrollToBottom();
 });
 
+// 监听窗口的尺寸变化，处理键盘弹出时的布局调整
+window.addEventListener('resize', function () {
+    const chatBox = document.getElementById('chat-box');
+    
+    // 判断是否处于输入框焦点状态，并滚动到底部
+    if (document.activeElement === document.getElementById('user-input')) {
+        // 等待键盘弹出后的布局调整完成，再滚动到底部
+        setTimeout(function () {
+            if (chatBox) {
+                chatBox.scrollTop = chatBox.scrollHeight;  // 滚动到底部
+            }
+        }, 300); // 300ms 延迟滚动，确保键盘弹出并页面布局完成
+    }
+});
+
 
 // 发送用户输入
 function sendMessage() {
