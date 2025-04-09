@@ -349,7 +349,7 @@ function showState3() {
 
         <!-- 按钮 -->
         <div class="button-container">
-            <button onclick="endRecording()" class="stop-recording-btn">点击 结束说话</button>
+            <button onclick="endRecording()" class="stop-recording-btn">结束说话</button>
             <button onclick="showState1()" class="keyboard-btn">键盘输入</button>
         </div>
     `;
