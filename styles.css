@@ -531,4 +531,8 @@ button:hover {
         height: 250px; /* 保持头像的高度与宽度一致 */
     }
 
+    /*state3 按钮部分 */
+    .button-container {
+        width: 70%; /* 保证容器占满父级空间 */
+    }
 }
