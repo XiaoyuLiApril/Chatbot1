@@ -243,12 +243,9 @@ window.addEventListener('resize', function () {
     
     // 判断是否处于输入框焦点状态，并滚动到底部
     if (document.activeElement === document.getElementById('user-input')) {
-        // 等待键盘弹出后的布局调整完成，再滚动到底部
-        setTimeout(function () {
-            if (chatBox) {
-                chatBox.scrollTop = chatBox.scrollHeight;  // 滚动到底部
-            }
-        }, 300); // 300ms 延迟滚动，确保键盘弹出并页面布局完成
+        if (chatBox) {
+            chatBox.scrollTop = chatBox.scrollHeight;  // 直接滚动到底部，不加延迟
+        }
     }
 });
 
@@ -309,18 +306,36 @@ function showState1() {
 
 // 切换到状态3，准备录音界面
 function showState3() {
+    // 获取屏幕宽度来判断是手机端还是电脑端
+    const isMobile = window.innerWidth <= 600; // 判断是否为手机端
+
+    // 动态生成录音条（条形的数量根据设备不同）
+    let audioBarsHTML = '';
+    if (isMobile) {
+        // 手机端：显示2条形
+        audioBarsHTML = `
+            <span class="audio-bar"></span>
+        `;
+    } else {
+        // 电脑端：显示6个条形
+        audioBarsHTML = `
+            <span class="audio-bar"></span>
+            <span class="audio-bar"></span>
+            <span class="audio-bar"></span>
+            <span class="audio-bar"></span>
+            <span class="audio-bar"></span>
+            <span class="audio-bar"></span>
+        `;
+    }
+
+
     // 更新 input-area 为状态3
     document.getElementById('input-area').innerHTML = `
         <!-- 第一行：竖线动画和录音状态 -->
         <div class="audio-recording">
             <div class="audio-animation">
                 <!-- 竖线动画 -->
-                <span class="audio-bar"></span>
-                <span class="audio-bar"></span>
-                <span class="audio-bar"></span>
-                <span class="audio-bar"></span>
-                <span class="audio-bar"></span>
-                <span class="audio-bar"></span>
+                ${audioBarsHTML}
             </div>
             <div class="recording-status">
                 <span>录音中</span>
@@ -328,12 +343,7 @@ function showState3() {
             </div>
             <div class="audio-animation">
                 <!-- 竖线动画 -->
-                <span class="audio-bar"></span>
-                <span class="audio-bar"></span>
-                <span class="audio-bar"></span>
-                <span class="audio-bar"></span>
-                <span class="audio-bar"></span>
-                <span class="audio-bar"></span>
+                ${audioBarsHTML}
             </div>
         </div>
 
