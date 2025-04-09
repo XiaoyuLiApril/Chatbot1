@@ -507,8 +507,8 @@ button:hover {
 
     /* 用户消息头像 */
     .message.user .message-avatar {
-        width: 70px; /* 用户头像大小 */
-        height: 70px; /* 用户头像大小 */
+        width: 60px; /* 用户头像大小 */
+        height: 60px; /* 用户头像大小 */
         margin-left: 10px; /* 距离右侧文字的间距 */
         margin-right: 10px; /* 确保头像在右侧 */
         object-fit: cover; /* 确保图片完整显示 */
