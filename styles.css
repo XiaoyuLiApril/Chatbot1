@@ -533,6 +533,6 @@ button:hover {
 
     /*state3 按钮部分 */
     .button-container {
-        width: 70%; /* 保证容器占满父级空间 */
+        width: 65%; /* 保证容器占满父级空间 */
     }
 }
