@@ -319,6 +319,7 @@ button:hover {
     display: flex;
     gap: 5px;
     align-items: center;
+    white-space: nowrap; /* 防止文字换行，确保"录音中"和时长在一行 */
 }
 
 /* 按钮部分 */
@@ -326,7 +327,7 @@ button:hover {
     display: flex;
     gap: 10px; /* 按钮之间的间距 */
     justify-content: space-between; /* 或者其他方式控制按钮之间的间距 */
-    width: 60%; /* 保证容器占满父级空间 */
+    width: 100%; /* 保证容器占满父级空间 */
 }
 
 /* 结束说话按钮 */
@@ -531,8 +532,4 @@ button:hover {
         height: 250px; /* 保持头像的高度与宽度一致 */
     }
 
-    /*state3 按钮部分 */
-    .button-container {
-        width: 65%; /* 保证容器占满父级空间 */
-    }
 }
