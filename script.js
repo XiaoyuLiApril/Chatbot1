@@ -4,6 +4,13 @@ let currentStep = 0;
 // 当前聊天记录框的字体大小
 let currentFontSize = 18; // 默认字体大小为18px
 
+if (window.innerWidth <= 600) {
+    document.body.style.fontSize = "18px"; // 强制设置页面字体大小
+    const elements = document.querySelectorAll('button, .message span, textarea');
+    elements.forEach(el => {
+        el.style.fontSize = "18px"; // 设置所有相关元素的字体大小
+    });
+}
 
 // 预设的对话流程
 const dialogueFlow = [
