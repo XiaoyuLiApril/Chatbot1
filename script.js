@@ -630,6 +630,26 @@ function updateFontSize() {
     });
 }
 
+//手机端字体监听
+document.addEventListener('DOMContentLoaded', function() {
+    // 检查设备是否为手机端（小于600px的屏幕宽度）
+    if (window.innerWidth <= 600) {
+      // 强制设置字体大小为18px
+      document.documentElement.style.fontSize = '18px';
+      document.body.style.fontSize = '18px';
+  
+      // 监听页面样式变化（例如微信可能动态调整字体）
+      const observer = new MutationObserver(function() {
+        if (getComputedStyle(document.body).fontSize !== '18px') {
+          document.body.style.fontSize = '18px !important';  // 强制恢复为18px
+        }
+      });
+  
+      // 监听 body 样式变化，确保字体大小一直是18px
+      observer.observe(document.body, { attributes: true, attributeFilter: ['style'] });
+    }
+  });
+
 
 // 初始化聊天
 initializeChat();
