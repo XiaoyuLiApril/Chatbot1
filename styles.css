@@ -479,37 +479,6 @@ button:hover {
 
 /* 针对屏幕宽度小于 600px 的设备（如手机）调整样式 */
 @media (max-width: 600px) {
-    html, body {
-        font-size: 20px !important; /* 设置手机端的基础字体大小 */
-        -webkit-text-size-adjust: none; /* 禁用自动调整字体 */
-    }
-
-    /* 消息字体 */
-    .message span {
-        font-size: 20px !important; /* 手机端固定字体大小 */
-    }
-
-    /* 选项按钮 */
-    .option-button {
-        font-size: 20px !important; /* 手机端固定按钮字体大小 */
-    }
-
-    /* 输入框 */
-    textarea {
-        font-size: 20px !important; /* 手机端固定输入框字体大小 */
-    }
-
-    /* 按钮 */
-    button {
-        font-size: 20px !important; /* 手机端固定按钮字体大小 */
-    }
-
-    /* 防止用户缩放页面 */
-    meta[name="viewport"] {
-        content: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no";
-    }
-    
-    
     .chat-container {
         border-radius: 0; /* 去除圆角 */
         box-shadow: none; /* 去除阴影 */
@@ -545,6 +514,9 @@ button:hover {
         object-fit: cover; /* 确保图片完整显示 */
     }
 
+    .message span {
+        font-size: 20px; /* 调整字体大小以适应小屏幕 */
+    }
 
     .font-size-controls {
         display: none; /* 隐藏按钮 */
@@ -564,6 +536,12 @@ button:hover {
     .option-button {
         font-size: 20px; /* 默认字体大小 */
         width: 60%; /* 按钮宽度占父容器的 80% */
-}
+    }  
+    
+    /* 输入框区域 */
+    .input-area {
+        width: 100%;
+        max-width: 100%; /* 确保不超过屏幕宽度 */
+    }
 
 }
