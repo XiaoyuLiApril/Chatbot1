@@ -479,6 +479,18 @@ button:hover {
 
 /* 针对屏幕宽度小于 600px 的设备（如手机）调整样式 */
 @media (max-width: 600px) {
+    /* 禁止微信调整字体大小 */
+    body {
+        -webkit-text-size-adjust: 100% !important; /* iOS/Safari */
+        text-size-adjust: 100% !important; /* 标准属性 */
+        font-size: 18px !important; /* 强制固定默认字号 */
+    }
+
+    html {
+        font-size: 18px !important; /* 设置基准单位为18px */
+    }
+    
+    
     .chat-container {
         border-radius: 0; /* 去除圆角 */
         box-shadow: none; /* 去除阴影 */
@@ -536,12 +548,6 @@ button:hover {
     .option-button {
         font-size: 20px; /* 默认字体大小 */
         width: 60%; /* 按钮宽度占父容器的 80% */
-    }  
-    
-    /* 输入框区域 */
-    .input-area {
-        width: 100%;
-        max-width: 100%; /* 确保不超过屏幕宽度 */
-    }
+}
 
 }
